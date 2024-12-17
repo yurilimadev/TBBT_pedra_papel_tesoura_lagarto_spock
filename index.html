@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBBT - Pedra, Papel, Tesoura, Lagarto, Spock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header id="cabecalho" class="cabecalho">
+        <h1>TBBT Game</h1>
+        <h3>Pedra, Papel, Tesoura, Lagarto, Spock</h3>        
+    </header>
+    <main id="area--do--jogo" class="area--do--jogo">
+        <section class="resultado-placar">
+            <div class="resultado">
+                <h1>Ganhador</h1>
+                <h2>Melhor de 5</h2>
+                <div class="controle">
+                    <button class="iniciar">
+                        JOGAR
+                    </button>
+                    <button class="reiniciar">
+                        REINICIAR
+                    </button>
+                </div>
+                
+            </div>
+            <div class="placar">
+                <div>
+                    <h1 class="placar-sheldon"></h1>
+                </div>
+                <div>
+                    <h1>X</h1>
+                </div>
+                <div>
+                    <h1 class="placar-kripke"></h1>
+                </div>
+                
+            </div>
+        </section>
+        <section class="jogadores">
+            <div class="sheldon">
+                <img class="img--sheldon"src="/img/sheldon/sheldon-inicio.png" alt="">
+                <div class="opcoes opcoes-sheldon">
+                    <div class="icones">
+                        <div class="icone">
+                            <img opt="tesoura" src="/icones/Inspiração/tesoura.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img  opt="pedra" src="/icones/Inspiração/pedra.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img  opt="papel" src="/icones/Inspiração/papel.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img opt="lagarto" src="/icones/Inspiração/lagarto.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img  opt="spock" src="/icones/Inspiração/spock.svg" alt="">
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div id="resposta-sheldon" class="resposta-sheldon">
+                    
+                </div>
+            </div>
+            <div class="kripke">
+                <img class="img--kripke" src="/img/kripke/barry-inicio.png" alt="">
+                <div class="opcoes opcoes-kripke">
+                    <div class="icones">
+                        <div class="icone">
+                            <img opt="tesoura" src="/icones/Inspiração/tesoura.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img  opt="pedra" src="/icones/Inspiração/pedra.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img  opt="papel" src="/icones/Inspiração/papel.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img opt="lagarto" src="/icones/Inspiração/lagarto.svg" alt="">
+                        </div>
+                        <div class="icone">
+                            <img  opt="spock" src="/icones/Inspiração/spock.svg" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="resposta-kripke" class="resposta-kripke">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="rodape" class="rodape">
+        <div>Uma Homenagem a Big Bang Theory - Por Yuri Dimitri</div>
+    </footer>
+    <script src="interacao.js"></script>
+</body>
+</html>
