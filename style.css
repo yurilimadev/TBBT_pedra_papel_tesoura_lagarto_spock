@@ -118,8 +118,8 @@ body{
 
 .opcoes{
     display: none;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #9A0F0F;
     height: 150px;
     width: 700px;
@@ -129,19 +129,13 @@ body{
 
 .opcoes-sheldon {
     width: 100%;
-    max-width: 100px;
+    max-width: 700px;
     padding-top: 15px;
     padding-bottom: 15px;
+    flex-direction: row;
     justify-content: space-around;
-    overflow: scroll;
-    position: absolute;
-    top: 60%;
-    right: 5%;
-    
 }
-.opcoes-sheldon::-webkit-scrollbar{
-    display:none;
-}
+
 .opcoes-kripke {
     width: 100%;
     max-width: 160px;
@@ -160,6 +154,7 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap:10px;
 }
 .icone{
     background-color:#695151;
@@ -241,6 +236,7 @@ body{
         max-width: 100px;
         padding-top: 15px;
         padding-bottom: 15px;
+        flex-direction: column;
         justify-content: space-around;
         overflow: scroll;
         position: absolute;
