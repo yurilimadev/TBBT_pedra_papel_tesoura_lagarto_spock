@@ -29,8 +29,8 @@ function reiniciar(){
         inicio[i].style.display = 'none';
     }
     
-    imgSheldon.src = '/img/sheldon/sheldon-inicio.png';
-    imgKripe.src = '/img/kripke/barry-inicio.png';
+    imgSheldon.src = 'img/sheldon/sheldon-inicio.png';
+    imgKripe.src = 'img/kripke/barry-inicio.png';
     placarSheldon.innerHTML = '0';
     placarKripke.innerHTML = '0';
 
@@ -52,19 +52,19 @@ function round(){
     if(regras[0][jogadaSheldon].includes(jogadaKripke)){
         pontoKripke +=1;
         placarKripke.innerHTML = pontoKripke;
-        imgSheldon.src = '/img/sheldon/sheldon-perdi.png';
-        imgKripe.src = '/img/kripke/barry-ganhei.png';
+        imgSheldon.src = 'img/sheldon/sheldon-perdi.png';
+        imgKripe.src = 'img/kripke/barry-ganhei.png';
         inicioLegenda.innerHTML = 'CHUPA ESSA MANGA!'
     } else if(jogadaKripke === jogadaSheldon){
         console.log('Empate');
-        imgSheldon.src = '/img/sheldon/sheldon-perdi.png';
-        imgKripe.src = '/img/kripke/barry-perdi.png';
+        imgSheldon.src = 'img/sheldon/sheldon-perdi.png';
+        imgKripe.src = 'img/kripke/barry-perdi.png';
         inicioLegenda.innerHTML = 'EMPATE!'
     }else{
         pontoSheldon +=1;
         placarSheldon.innerHTML = pontoSheldon;
-        imgSheldon.src = '/img/sheldon/sheldon-ganhei.png';
-        imgKripe.src = '/img/kripke/barry-perdi.png';
+        imgSheldon.src = 'img/sheldon/sheldon-ganhei.png';
+        imgKripe.src = 'img/kripke/barry-perdi.png';
         inicioLegenda.innerHTML = 'BAZINGA!'
     }
 }
@@ -100,8 +100,8 @@ function validarResposta(){
         jogadaSheldon = null;
         
         setTimeout(()=>{
-            imgSheldon.src = '/img/sheldon/sheldon-inicio.png';
-            imgKripe.src = '/img/kripke/barry-inicio.png';
+            imgSheldon.src = 'img/sheldon/sheldon-inicio.png';
+            imgKripe.src = 'img/kripke/barry-inicio.png';
             var kripkeVolta = document.querySelector('.resposta-kripke');
             kripkeVolta.style.display = 'none';
             kripkeVolta.innerHTML = '';
@@ -129,7 +129,7 @@ opcoesSheldon.forEach((opcao) =>{
         respostaSheldon.style.display = 'block';
         respostaSheldon.innerHTML = `
         <div class="icone">
-            <img opt="${jogadaSheldon}" src="/icones/Inspiração/${jogadaSheldon}.svg" alt="">
+            <img opt="${jogadaSheldon}" src="icones/Inspiração/${jogadaSheldon}.svg" alt="">
         </div>
     `;
         validarResposta();
@@ -149,7 +149,7 @@ function respostaKripke(){
     respostaKripke.style.display = 'block';
     respostaKripke.innerHTML = `
         <div class="icone">
-            <img opt="${jogadaKripke}" src="/icones/Inspiração/${jogadaKripke}.svg" alt="">
+            <img opt="${jogadaKripke}" src="icones/Inspiração/${jogadaKripke}.svg" alt="">
         </div>
     `;
     setTimeout(()=>{
