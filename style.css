@@ -223,6 +223,12 @@ body{
         gap:50px;
         align-items: center;
     }
+
+    .regras{
+        display: flex;
+        flex-direction: row;
+    }
+
     .placar{
         height: 60px;
     }
@@ -278,5 +284,18 @@ body{
     }
     .icone img{
         width: 100%;
+    }
+    .regras{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .regras iframe{
+        width: 100%;
+        border-radius: 10px;
+        
     }
 }
