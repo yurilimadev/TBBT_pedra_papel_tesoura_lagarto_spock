@@ -197,7 +197,7 @@ body{
     width: 100%;
     text-align: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
     body{
         background: radial-gradient(red,yellow);
         display:flex;
@@ -209,6 +209,7 @@ body{
     }
     h2{
         font-size: 14px;
+        text-align: center;
     }
     .cabecalho {
         text-align: center;
@@ -217,7 +218,9 @@ body{
 
     .area--do--jogo {
         display: flex;
-        flex-direction: column; /* Organiza os elementos verticalmente */
+        flex-direction: column;
+        justify-content: space-between;
+        gap:50px;
         align-items: center;
     }
     .placar{
@@ -240,17 +243,17 @@ body{
         justify-content: space-around;
         overflow: scroll;
         position: absolute;
-        top: 60%;
-        right: 5%;
+        top: 70%;
+        right: 30%;
          /* Ocupa toda a largura disponível */
     }
     .resposta-sheldon{
-        width: 80px; /* Reduz o tamanho dos ícones */
-        height: 80px;
+        width: 40px; /* Reduz o tamanho dos ícones */
+        height: 40px;
     }
     .resposta-kripke{
-        width: 80px; /* Reduz o tamanho dos ícones */
-        height: 80px;
+        width: 40px; /* Reduz o tamanho dos ícones */
+        height: 40px;
     }
     .opcoes-kripke {
         width: 100%;
@@ -270,8 +273,8 @@ body{
         gap: 15px
     }
     .icone {
-        width: 80px; /* Reduz o tamanho dos ícones */
-        height: 80px;
+        width: 50px; /* Reduz o tamanho dos ícones */
+        height: 50px;
     }
     .icone img{
         width: 100%;
