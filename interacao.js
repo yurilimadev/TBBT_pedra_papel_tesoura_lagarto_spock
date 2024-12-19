@@ -28,7 +28,7 @@ function reiniciar(){
     for (let i=0;i<inicio.length;i++){
         inicio[i].style.display = 'none';
     }
-    
+
     imgSheldon.src = 'img/sheldon/sheldon-inicio.png';
     imgKripe.src = 'img/kripke/barry-inicio.png';
     placarSheldon.innerHTML = '0';
@@ -70,10 +70,10 @@ function round(){
 }
 function validarResposta(){
     jogadaKripke = respostaKripke();
-    
+
 
     if (jogadaKripke == null || jogadaSheldon == null){
-        
+
     }else{
         switch(jogadaSheldon){
             case "tesoura":
@@ -94,11 +94,24 @@ function validarResposta(){
             default:
                 console.log('Jogada Inválida');
                 break;
-            
+
         }
+        if (pontoSheldon >= 3){
+            inicioLegenda.innerHTML = 'SHELDON É O VENCEDOR!';
+            setTimeout(() => {
+                reiniciar();
+            }, 2000);
+
+        }else if(pontoKripke >= 3){
+            inicioLegenda.innerHTML = 'KRIPKE É O VENCEDOR!';
+            setTimeout(() => {
+                reiniciar();
+            }, 2000);
+        }
+
         jogadaKripke = null;
         jogadaSheldon = null;
-        
+
         setTimeout(()=>{
             imgSheldon.src = 'img/sheldon/sheldon-inicio.png';
             imgKripe.src = 'img/kripke/barry-inicio.png';
@@ -110,13 +123,8 @@ function validarResposta(){
             respostaSheldon.innerHTML = '';
         },2000);
     }
-    
-    if (pontoSheldon == 5){
-        inicioLegenda.innerHTML = 'SHELDON É O VENCEDOR!';
-        
-    }else if(pontoKripke == 5){
-        inicioLegenda.innerHTML = 'KRIPKE É O VENCEDOR!';
-    }
+
+
 };
 
 
@@ -134,16 +142,16 @@ opcoesSheldon.forEach((opcao) =>{
     `;
         validarResposta();
     })
-    
+
 });
 
 function respostaKripke(){
     let marcacao = Math.round(Math.random() * 3);
     var opcoesKripke = document.querySelectorAll('.kripke .icone img');
     // var kripke = document.querySelectorAll('.opcoes-kripke .icones .icone');
-    
+
     jogadaKripke = opcoesKripke[marcacao].getAttribute('opt');
-    
+
     //kripke[marcacao].style.backgroundColor = '#9A0F0F';
     var respostaKripke = document.querySelector('.resposta-kripke');
     respostaKripke.style.display = 'block';
@@ -155,8 +163,7 @@ function respostaKripke(){
     setTimeout(()=>{
         //kripke[marcacao].style.backgroundColor = '#695151';
     },2000)
-    
-    return jogadaKripke;
-    
-}
 
+    return jogadaKripke;
+
+}
